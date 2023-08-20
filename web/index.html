@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Axum+htmx+Vite+Tailwind</title>
+
+  <link rel="stylesheet" href="./src/index.css">
+  <script type="module">
+    import 'htmx.org';
+  </script>
+</head>
+
+<body class="bg-gray-50">
+  <div class="pt-10 flex flex-col items-center justify-center">
+    <button class="text-white text-md bg-lime-500 border-0 py-2 px-6 hover:bg-green-500 rounded" hx-trigger="click"
+      hx-get="/web/hello" hx-target="#hello" hx-swap="innerHTML">Say Hi</button>
+    <div id="hello" class="pt-10 text-gray-800 text-2xl"></div>
+  </div>
+</body>
+
+</html>
